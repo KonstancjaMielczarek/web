@@ -112,7 +112,7 @@ input, select, textarea {
   display: inline-block;
   padding-top: 0.2em;
   padding-right: 0.05em;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.3em;
   overflow: hidden;
 }
 
@@ -138,7 +138,6 @@ body {
 }
 
 .grid-item {
-  padding: 3rem;
   background-color: #e9f5db;
 }
 .grid-item-1 {
@@ -152,6 +151,9 @@ body {
   padding: 2rem 1rem;
 }
 .grid-item-3 {
+  padding: 3rem;
+}
+.grid-item-4 {
   padding: 3rem;
 }
 .grid-item-5 {
@@ -172,10 +174,12 @@ body {
 
   .grid-item-3 {
     grid-column: span 2;
+    padding: 3rem 2rem;
   }
 
   .grid-item-4 {
     grid-column: span 2;
+    padding: 3rem 2rem;
   }
 }
 @media (max-width: 600px) {
@@ -193,7 +197,7 @@ body {
   }
 }
 .row {
-  padding: 3rem;
+  padding: 3rem 0;
   border-bottom: 3px solid #fff;
 }
 .row h2 {
@@ -205,7 +209,7 @@ body {
   line-height: 150%;
 }
 .row-1 {
-  padding: 0 3rem 3rem 3rem;
+  padding: 0 0 3rem 0;
 }
 
 .row-btn {
@@ -215,7 +219,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  border-radius: 10px;
+  border-radius: 40px;
   border: 2px solid #000;
   text-decoration: none;
   color: #000;
@@ -239,4 +243,77 @@ body {
 .aside-row p {
   line-height: 140%;
   margin-bottom: 3rem;
+}
+
+.gallery-row {
+  padding: 3rem 0;
+}
+.gallery-row h2 {
+  font-size: 1.8em;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.gallery-row ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+.gallery-row li {
+  height: 30vh;
+  flex: 1;
+}
+.gallery-row li:last-child {
+  flex: 10;
+}
+.gallery-row a {
+  text-decoration: none;
+}
+.gallery-row a:hover {
+  opacity: 0.5;
+}
+.gallery-row img {
+  max-height: 100%;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+.gallery-row h3 {
+  font-size: 1.2em;
+  display: inline;
+}
+.gallery-row .date {
+  margin-top: 3rem;
+  display: block;
+  text-align: right;
+  color: #777;
+}
+.gallery-row p {
+  margin-top: 2rem;
+  line-height: 150%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .gallery-row li {
+    height: 30vh;
+  }
+}
+@media (max-height: 480px) {
+  .gallery-row li {
+    height: 80vh;
+  }
+}
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .gallery-row ul {
+    flex-direction: row;
+  }
+  .gallery-row li {
+    height: auto;
+    width: 100%;
+  }
+  .gallery-row img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
