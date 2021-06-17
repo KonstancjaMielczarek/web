@@ -1,0 +1,27 @@
+@use "../components/colors";
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 0.2%;
+    .contact-item {
+        padding: 3rem;
+        background-color: colors.$lightGreen;
+    }
+    .contact-item-1 {
+        grid-column: span 2;
+        background-color: colors.$darkOlive;
+        color: #fff;
+        text-align: center;
+    }
+    .contact-item-2 {
+        padding: 2rem 1rem;
+    }
+    // .contact-item-3 {
+
+    // }
+    .contact-item-4 {
+        grid-column: span 2;
+        background-color: colors.$darkOlive;
+    }
+}

@@ -1,6 +1,6 @@
 @use "../components/colors";
 
-#about-container {
+.about-container {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-gap: 2px;
@@ -17,7 +17,6 @@
         padding: 3rem;
     }
     .about-item-2 {
-        //aside nav
         padding: 2rem 1rem;
     }
     .about-item-3 {
@@ -88,7 +87,7 @@
 }
 
 @media (max-width: 600px) {
-    #about-container {
+    .about-container {
         grid-template-columns: 1fr;
     }
     .about-item {
