@@ -1,12 +1,14 @@
+@use "components/colors";
+
 @import "base/reset";
 @import "components/footer";
 @import "components/navigation";
 @import "components/logo";
+@import "components/links";
+@import "pages/about";
+@import "pages/blog";
+@import "pages/contact";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-$darkGreen : #333D29;
-$lightGreen : #656D4A;
-
 
 body {
     font-size: 1em;
@@ -26,14 +28,13 @@ body {
 }
 
 .grid-item {
-    background-color: #e9f5db;
+    background-color: colors.$lightGreen;
     &-1 {
         grid-column: span 3;
-        background-color: $lightGreen;
+        background-color: colors.$darkOlive;
         color: #fff;
         text-align: center;
-        padding: 3rem;
-        
+        padding: 3rem;   
     }
 
     &-2 {
@@ -51,7 +52,7 @@ body {
     &-5 {
         grid-column: span 3;
         padding: 3rem;
-        background-color: $lightGreen;
+        background-color: colors.$darkOlive;
     }
 }
 
@@ -119,7 +120,7 @@ body {
     color: #000;
     display: inline-block;
     &:hover {
-        background-color: $lightGreen;
+        background-color: colors.$darkOlive;
         color: #fff;
         border: 2px solid transparent;
     }

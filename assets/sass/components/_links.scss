@@ -1,0 +1,14 @@
+@use "colors";
+
+.links {
+    color: colors.$darkOlive;
+    font-weight: 600;
+}
+
+.links:visited {
+    color: colors.$sealBrown;
+}
+
+.links:hover, .links:active {
+    color: colors.$russet;
+}

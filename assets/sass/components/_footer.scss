@@ -1,3 +1,5 @@
+@use "colors";
+
 .footer {
     color: #fff;
     a {
@@ -5,7 +7,7 @@
         color: #fff;
         font-size: 1em;
         &:hover {
-            color: #CB997E;
+            color: colors.$laurelGreen;
         }
     }
 }

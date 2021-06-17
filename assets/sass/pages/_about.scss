@@ -1,0 +1,107 @@
+@use "../components/colors";
+
+#about-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 2px;
+    max-width: 100%;
+    height: auto;
+    .about-item {
+        background-color: colors.$lightGreen;
+    }
+    .about-item-1 {
+        grid-column: span 2;
+        background-color: colors.$darkOlive;
+        color: #fff;
+        text-align: center;
+        padding: 3rem;
+    }
+    .about-item-2 {
+        //aside nav
+        padding: 2rem 1rem;
+    }
+    .about-item-3 {
+        .about-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            img {
+                max-width: 100%;
+                height: auto;
+                transition: all 0.5s;
+                &:hover {
+                    // transform: scale(0.97);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .about-row {
+            padding: 3rem;
+            h1 {
+                font-size: 2em;
+                letter-spacing: 3px;
+                margin-bottom: 1rem;
+            }
+            p {
+                line-height: 150%;
+                text-indent: 2rem;
+                padding: 1rem 0;
+                text-align: justify;
+            }
+            p:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        .about-column {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 3rem;
+            border-top: 2px solid #fff;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                transition: all 0.5s;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            .about-date {
+                text-align: right;
+                color: #777;
+                padding-bottom: 1rem;
+                font-size: 1.3em;
+            }
+            div {
+                line-height: 150%;
+                padding-left: 2rem;
+                text-align: justify;
+            }
+        }
+    }
+    .about-item-4 {
+        grid-column: span 2;
+        background-color: colors.$darkOlive;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #about-container {
+        grid-template-columns: 1fr;
+    }
+    .about-item {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .about-item-3 {
+        .about-photos {
+            grid-template-columns: 1fr;    
+        }
+        .about-column {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -78,7 +78,7 @@ input, select, textarea {
   font-size: 1em;
 }
 .footer a:hover {
-  color: #CB997E;
+  color: #C2C5AA;
 }
 
 #nav_header {
@@ -121,6 +121,116 @@ input, select, textarea {
   line-height: 1em;
 }
 
+.links {
+  color: #656D4A;
+  font-weight: 600;
+}
+
+.links:visited {
+  color: #582F0E;
+}
+
+.links:hover, .links:active {
+  color: #7F4F24;
+}
+
+#about-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 2px;
+  max-width: 100%;
+  height: auto;
+}
+#about-container .about-item {
+  background-color: #e9f5db;
+}
+#about-container .about-item-1 {
+  grid-column: span 2;
+  background-color: #656D4A;
+  color: #fff;
+  text-align: center;
+  padding: 3rem;
+}
+#about-container .about-item-2 {
+  padding: 2rem 1rem;
+}
+#about-container .about-item-3 .about-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#about-container .about-item-3 .about-photos img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+#about-container .about-item-3 .about-photos img:hover {
+  opacity: 0.8;
+}
+#about-container .about-item-3 .about-row {
+  padding: 3rem;
+}
+#about-container .about-item-3 .about-row h1 {
+  font-size: 2em;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+#about-container .about-item-3 .about-row p {
+  line-height: 150%;
+  text-indent: 2rem;
+  padding: 1rem 0;
+  text-align: justify;
+}
+#about-container .about-item-3 .about-row p:last-child {
+  padding-bottom: 0;
+}
+#about-container .about-item-3 .about-column {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 3rem;
+  border-top: 2px solid #fff;
+}
+#about-container .about-item-3 .about-column img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+#about-container .about-item-3 .about-column img:hover {
+  opacity: 0.8;
+}
+#about-container .about-item-3 .about-column .about-date {
+  text-align: right;
+  color: #777;
+  padding-bottom: 1rem;
+  font-size: 1.3em;
+}
+#about-container .about-item-3 .about-column div {
+  line-height: 150%;
+  padding-left: 2rem;
+  text-align: justify;
+}
+#about-container .about-item-4 {
+  grid-column: span 2;
+  background-color: #656D4A;
+  padding: 3rem;
+}
+
+@media (max-width: 600px) {
+  #about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-item {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .about-item-3 .about-photos {
+    grid-template-columns: 1fr;
+  }
+  .about-item-3 .about-column {
+    grid-template-columns: 1fr;
+  }
+}
 body {
   font-size: 1em;
   font-family: "Open Sans", Helvetica, sans-serif;
