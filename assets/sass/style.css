@@ -378,8 +378,9 @@ header {
 }
 header #contact-title {
   font-size: 2.2em;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
 }
 header #contact-desc {
   color: #777;
@@ -404,7 +405,7 @@ header #contact-desc {
 .contact-form__input .contact-form__input--email {
   width: 100%;
   height: 1.5rem;
-  padding: 1rem 0.5rem;
+  padding: 1.5rem 0.5rem;
   border-radius: 0.2rem;
   border: 1px solid #222;
   outline: 0;
@@ -416,6 +417,10 @@ header #contact-desc {
   border: 2px solid #656D4A;
   box-shadow: 0 0 2px #222;
   color: #222;
+  box-shadow: 0 0 4px #555;
+}
+.contact-form__input .contact-form__input--email:hover {
+  box-shadow: 0 0 4px #555;
 }
 .contact-form__input .contact-form__input--textarea {
   resize: vertical;
@@ -432,6 +437,10 @@ header #contact-desc {
   border: 2px solid #656D4A;
   box-shadow: 0 0 2px #222;
   color: #222;
+  box-shadow: 0 0 4px #555;
+}
+.contact-form__input .contact-form__input--textarea:hover {
+  box-shadow: 0 0 4px #555;
 }
 .contact-form__input #contact-form__input--submit {
   width: 100%;
@@ -456,16 +465,38 @@ header #contact-desc {
   margin: 0 0 2rem 0;
 }
 
-@media (max-width: 900px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-item {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
+.contact-informations {
+  margin-top: 3rem;
+  padding: 3rem;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
+.contact-informations .contact-info h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+.contact-informations .contact-info__item {
+  font-size: 1.2em;
+  line-height: 200%;
+}
+.contact-informations .contact-info .material-icons {
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+.contact-informations .contact-map img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+.contact-informations .contact-map img:hover {
+  transform: scale(1.1);
+}
+
 body {
   font-size: 1em;
   font-family: "Open Sans", Helvetica, sans-serif;

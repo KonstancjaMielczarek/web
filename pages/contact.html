@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="/assets/sass/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 <body>
@@ -31,23 +32,62 @@
             </aside>
         </div>
         <div class="contact-item contact-item-3">
-            <header>
-                <h1 id="contact-title">Stay in touch</h1>
-                <p id="contact-desc">If you have any questions write to us!</p>
-            </header>
-            <form id="contact-form">
-                <div class="contact-form__input">
-                    <p class="contact-form__label">Email</p>
-                    <input type="email" name="email" id="email" placeholder="email" class="contact-form__input--email" required>
+            <section>
+                <header>
+                    <h1 id="contact-title">Stay in touch</h1>
+                    <p id="contact-desc">If you have any questions write to us!</p>
+                </header>
+                <form id="contact-form">
+                    <div class="contact-form__input">
+                        <p class="contact-form__label">Email</p>
+                        <input type="email" name="email" id="email" placeholder="email" class="contact-form__input--email" required>
+                    </div>
+                    <div class="contact-form__input">
+                        <p class="contact-form__label">Messege</p>
+                        <textarea type="text" placeholder="Enter your messege here..." class="contact-form__input--textarea" required></textarea>
+                    </div>
+                    <div class="contact-form__input">
+                        <input type="submit" value="Send" id="contact-form__input--submit">
+                    </div>
+                </form>
+            </section>
+            <!-- <section>
+                <div class="contact-icons">
+                    <a href="www.facebook.com" title="facebook.com" target="_blank">
+                        <span class="material-icons">facebook</span>
+                    </a>
+                    <a href="www.facebook.com" title="facebook.com" target="_blank">
+                        <span class="material-icons">facebook</span>
+                    </a>
+                    <a href="www.facebook.com" title="facebook.com" target="_blank">
+                        <span class="material-icons">facebook</span>
+                    </a>
                 </div>
-                <div class="contact-form__input">
-                    <p class="contact-form__label">Messege</p>
-                    <textarea type="text" placeholder="Enter your messege here..." class="contact-form__input--textarea" required></textarea>
+            </section> -->
+            <section>
+                <div class="contact-informations">
+                    <div class="contact-info">
+                        <h1>Contact</h1>
+                        <p class="contact-info__item">
+                            <span class="material-icons">phone</span>
+                            Phone: +48 111-222-333
+                        </p>
+                        <p class="contact-info__item">
+                            <span class="material-icons">place</span>
+                            Adres: Poland, Silesian
+                        </p>
+                        <p class="contact-info__item">
+                            <span class="material-icons">email</span>
+                            Email: example@gmail.com
+                        </p>
+                    </div>
+                    <div class="contact-map">
+                        <a href="#" target="_blank"><img src="/images/maps.png" title="Address"></a>
+                    </div>
+                    <!-- <iframe src="https://www.google.pl/maps/place/Agora+Bytom/@50.3475791,18.9171904,17z/data=!3m1!4b1!4m5!3m4!1s0x4716d32f094a6b1b:0x52b1459ddc52360e!8m2!3d50.3475757!4d18.9193791" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe> -->
                 </div>
-                <div class="contact-form__input">
-                    <input type="submit" value="Send" id="contact-form__input--submit">
-                </div>
-            </form>
+            </section>
         </div>
         <div class="contact-item contact-item-4">
             <footer>

@@ -11,7 +11,6 @@
         "header header"
         "asidenav content"
         "footer footer";
-    // grid-auto-rows: auto;
     grid-gap: 0.2%;
     .contact-item {
         padding: 3rem;
@@ -19,7 +18,6 @@
     }
     .contact-item-1 {
         grid-area: header;
-        // grid-column: span 2;
         background-color: colors.$darkOlive;
         color: #fff;
         text-align: center;
@@ -35,10 +33,18 @@
     }
     .contact-item-4 {
         grid-area: footer;
-        // grid-column: span 2;
         background-color: colors.$darkOlive;
     }
 }
+// @media (max-width: 900px) {
+//     .contact-container {
+//         grid-template-columns: 1fr;
+//     }
+//     .contact-item {
+//         grid-column: span 1;
+//         grid-row: span 1;
+//     }
+// }
 
 @media(max-width: 900px){
     #contact-form {
@@ -56,10 +62,6 @@
             "content"
             "footer";
     }
-    // .contact-item{
-    //   grid-column: span 1;
-    //   grid-row: span 1;
-    // }
     .contact-item-1 {
         grid-area: header;
     }
@@ -83,8 +85,9 @@
       margin-bottom: 1rem;
       #contact-title {
         font-size: 2.2em;
-        letter-spacing: 1px;
-        margin-bottom: 1rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
       }
       #contact-desc {
         color: #777;
@@ -108,9 +111,8 @@
     .contact-form__input--email {
         width: 100%;
         height: 1.5rem;
-        padding: 1rem 0.5rem;
+        padding: 1.5rem 0.5rem;
         border-radius: 0.2rem;
-        // border-style: none;
         border: 1px solid #222;
         outline: 0;
         margin-top: 0.4rem;
@@ -120,6 +122,10 @@
             border: 2px solid colors.$darkOlive;
             box-shadow: 0 0 2px #222;
             color: #222;
+            box-shadow: 0 0 4px #555;
+        }
+        &:hover {
+            box-shadow: 0 0 4px #555;
         }
     }
       .contact-form__input--textarea {
@@ -135,8 +141,12 @@
           &:focus {
             border: 2px solid colors.$darkOlive;
             box-shadow: 0 0 2px #222;
-            color: #222
+            color: #222;
+            box-shadow: 0 0 4px #555;
           }
+          &:hover {
+            box-shadow: 0 0 4px #555;
+        }
       }
       #contact-form__input--submit {
         width: 100%;
@@ -144,7 +154,6 @@
         background: colors.$darkOlive;
         color: white;
         border-radius: 0.2rem;
-        // border: 2px solid transparent;
         cursor: pointer;
         border: none;
         font-size: 1.2rem;
@@ -162,12 +171,39 @@
       margin: 0 0 2rem 0;
   }
 
-@media (max-width: 900px) {
-    .contact-container {
-        grid-template-columns: 1fr;
+.contact-informations {
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    .contact-info {
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+        &__item {
+            font-size: 1.2em;
+            line-height: 200%;
+        }
+        .material-icons {
+            font-size: 1.5em;
+            vertical-align: middle;
+            margin-right: 0.3rem;
+        }
     }
-    .contact-item {
-        grid-column: span 1;
-        grid-row: span 1;
+    
+    .contact-map {
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: all 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 }
