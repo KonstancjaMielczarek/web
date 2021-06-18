@@ -380,7 +380,12 @@ header #contact-desc {
   outline: 0;
   margin-top: 0.4rem;
   font-size: 1.2em;
-  color: #999;
+  color: #555;
+}
+.contact-form__input .contact-form__input--email:focus {
+  border: 2px solid #656D4A;
+  box-shadow: 0 0 2px #222;
+  color: #222;
 }
 .contact-form__input .contact-form__input--textarea {
   resize: vertical;
@@ -391,7 +396,12 @@ header #contact-desc {
   border: 1px solid #222;
   font-size: 1.2em;
   font-family: "Open Sans", Helvetica, sans-serif;
-  color: #999;
+  color: #555;
+}
+.contact-form__input .contact-form__input--textarea:focus {
+  border: 2px solid #656D4A;
+  box-shadow: 0 0 2px #222;
+  color: #222;
 }
 .contact-form__input #contact-form__input--submit {
   width: 100%;
@@ -416,6 +426,16 @@ header #contact-desc {
   margin: 0 0 2rem 0;
 }
 
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
 body {
   font-size: 1em;
   font-family: "Open Sans", Helvetica, sans-serif;

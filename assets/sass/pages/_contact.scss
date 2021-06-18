@@ -78,7 +78,12 @@
         outline: 0;
         margin-top: 0.4rem;
         font-size: 1.2em;
-        color: #999;
+        color: #555;
+        &:focus {
+            border: 2px solid colors.$darkOlive;
+            box-shadow: 0 0 2px #222;
+            color: #222;
+        }
     }
       .contact-form__input--textarea {
           resize: vertical;
@@ -89,7 +94,12 @@
           border: 1px solid #222;
           font-size: 1.2em;
           font-family: 'Open Sans', Helvetica, sans-serif;
-          color: #999
+          color: #555;
+          &:focus {
+            border: 2px solid colors.$darkOlive;
+            box-shadow: 0 0 2px #222;
+            color: #222
+          }
       }
       #contact-form__input--submit {
         width: 100%;
@@ -114,3 +124,13 @@
   .contact-form__input:first-child {
       margin: 0 0 2rem 0;
   }
+
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-item {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
