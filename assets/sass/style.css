@@ -488,6 +488,10 @@ header #contact-desc {
   vertical-align: middle;
   margin-right: 0.3rem;
 }
+.contact-informations .contact-info a {
+  text-decoration: none;
+  color: #000;
+}
 .contact-informations .contact-map img {
   max-width: 100%;
   height: auto;
