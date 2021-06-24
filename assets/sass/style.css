@@ -193,6 +193,8 @@ input, select, textarea {
   max-width: 100%;
   height: auto;
   transition: all 0.5s;
+  border-radius: 3px;
+  box-shadow: 0 0 4px #777;
 }
 .about-container .about-item-3 .about-column img:hover {
   opacity: 0.8;
@@ -200,7 +202,7 @@ input, select, textarea {
 .about-container .about-item-3 .about-column .about-date {
   text-align: right;
   color: #777;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   font-size: 1.3em;
 }
 .about-container .about-item-3 .about-column div {
@@ -218,17 +220,18 @@ input, select, textarea {
   .about-container {
     grid-template-columns: 1fr;
   }
-
-  .about-item {
+  .about-container .about-item {
     grid-column: span 1;
     grid-row: span 1;
   }
-
-  .about-item-3 .about-photos {
+  .about-container .about-item-3 .about-photos {
     grid-template-columns: 1fr;
   }
-  .about-item-3 .about-column {
+  .about-container .about-item-3 .about-column {
     grid-template-columns: 1fr;
+  }
+  .about-container .about-item-3 .about-column .about-date {
+    padding-top: 2rem;
   }
 }
 .blog-container {
@@ -278,7 +281,7 @@ input, select, textarea {
 }
 
 .blog-row-content {
-  padding: 2rem;
+  padding: 0 2rem;
 }
 .blog-row-content .date {
   color: #777;
@@ -292,27 +295,59 @@ input, select, textarea {
   line-height: 150%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px), (max-width: 600px) {
   .blog-container {
     grid-template-columns: 1fr;
   }
-
-  .grid-item {
+  .blog-container .blog-item {
     grid-row: span 1;
     grid-column: span 1;
   }
-
-  .grid-item-2 {
-    padding: 2rem;
+  .blog-container .blog-item-3 .blog-row-left {
+    grid-template-columns: 1fr;
+    padding: 1rem 0;
+    align-content: center;
+    justify-content: center;
+  }
+  .blog-container .blog-item-3 .blog-row-left .date {
+    padding-top: 2rem;
+  }
+  .blog-container .blog-item-3 .blog-row-right {
+    grid-template-columns: 1fr;
+    padding: 1rem 0;
+    align-content: center;
+    justify-content: center;
+  }
+  .blog-container .blog-item-3 .blog-row-right .desc {
+    padding-bottom: 2rem;
   }
 }
+#blog-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 3rem 3rem;
+}
+#blog-pagination a {
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.4s;
+  color: #000;
+  font-size: 1.2em;
+}
+#blog-pagination a:hover:not(.active) {
+  background-color: #ccc;
+}
+#blog-pagination .active {
+  background-color: #656D4A;
+  color: #fff;
+}
+
 .contact-container {
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-areas: "header header" "asidenav content" "footer footer";
   grid-gap: 0.2%;
 }
 .contact-container .contact-item {
@@ -320,56 +355,55 @@ input, select, textarea {
   background-color: #e9f5db;
 }
 .contact-container .contact-item-1 {
-  grid-area: header;
+  grid-column: span 2;
   background-color: #656D4A;
   color: #fff;
   text-align: center;
 }
 .contact-container .contact-item-2 {
-  grid-area: asidenav;
   padding: 2rem 1rem;
 }
 .contact-container .contact-item-3 {
-  grid-area: content;
   padding: 3rem auto 3rem auto;
   width: 100%;
 }
 .contact-container .contact-item-4 {
-  grid-area: footer;
+  grid-column: span 2;
   background-color: #656D4A;
 }
 
-@media (max-width: 900px) {
-  #contact-form {
-    padding: 3rem;
-    background-color: lightcoral;
+@media (max-width: 1000px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-container .contact-item {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .contact-container #contact-form {
+    padding: 2rem 1.5rem;
   }
 }
 @media (max-width: 600px) {
   .contact-container {
     grid-template-columns: 1fr;
-    grid-area: "header" "asidenav" "content" "footer";
   }
-
-  .contact-item-1 {
-    grid-area: header;
+  .contact-container .contact-item {
+    grid-row: span 1;
+    grid-column: span 1;
   }
-
-  .contact-item-2 {
-    grid-area: asidenav;
-  }
-
-  .contact-item-3 {
-    grid-area: content;
-  }
-
-  .contact-item-4 {
-    grid-area: footer;
-  }
-
-  #contact-form {
+  .contact-container #contact-form {
     padding: 2rem;
-    background-color: lightblue;
+  }
+  .contact-container .contact-item-3 {
+    padding: 3rem 1rem;
+  }
+  .contact-container .contact-item-3 .contact-informations {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  .contact-container .contact-item-3 .contact-informations .contact-info {
+    padding-bottom: 2rem;
   }
 }
 header {
@@ -667,6 +701,7 @@ body {
   display: block;
   text-align: right;
   color: #777;
+  font-size: 1.3rem;
 }
 .gallery-row p {
   margin-top: 2rem;

@@ -1,109 +1,121 @@
 @use "../components/colors";
 
 .blog-container {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    // grid-template-areas: 
-    //     "header header header header header"
-    //     "sidenav content content content content"
-    //     "footer footer footer footer footer";
-    grid-gap: 0.2%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 0.2%;
 
-    .blog-item {
-        padding: 3rem;
-        background-color: colors.$lightGreen;
-    }
-    .blog-item-1 {
-        grid-column: span 2;
-        // grid-area: header;
-        background-color: colors.$darkOlive;
-        color: #fff;
-        text-align: center;
-        padding: 3rem;
-    }
-    .blog-item-2 {
-        // grid-area: sidenav;
-        padding: 2rem 1rem;
-    }
+  .blog-item {
+    padding: 3rem;
+    background-color: colors.$lightGreen;
+  }
+  .blog-item-1 {
+    grid-column: span 2;
+    background-color: colors.$darkOlive;
+    color: #fff;
+    text-align: center;
+    padding: 3rem;
+  }
+  .blog-item-2 {
+    padding: 2rem 1rem;
+  }
 
-    .blog-item-3 {
-        // grid-area: content;
-        .blog-row-left {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            padding: 3rem 0;
-            border-bottom: 3px solid #fff;
-            @extend %img;
-        }
-        .blog-row-right {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            padding: 3rem 0;
-            border-bottom: 3px solid #fff;
-            @extend %img;
-        }
+  .blog-item-3 {
+    .blog-row-left {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      padding: 3rem 0;
+      border-bottom: 3px solid #fff;
+      @extend %img;
     }
+    .blog-row-right {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      padding: 3rem 0;
+      border-bottom: 3px solid #fff;
+      @extend %img;
+    }
+  }
 
-    .blog-item-4 {
-        grid-column: span 2;
-        // grid-area: footer;
-        background-color: colors.$darkOlive;
-    }
+  .blog-item-4 {
+    grid-column: span 2;
+    background-color: colors.$darkOlive;
+  }
 }
 
 %img {
-    img {
-        max-width: 100%;
-        height: auto;
-        transition: all 0.5s;
-        border-radius: 4px;
-        &:hover {
-            opacity: 0.5;
-        }
-    } 
+  img {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    border-radius: 4px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 .blog-row-content {
-    padding: 2rem;
-    .date {
-        color: #777;
-        font-size: 1.3em;
-        text-align: right;
-        margin-bottom: 1rem;
-    }
-    .desc {
-        text-indent: 2rem;
-        text-align: justify;
-        line-height: 150%;
-    }
+  padding: 0 2rem;
+  .date {
+    color: #777;
+    font-size: 1.3em;
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+  .desc {
+    text-indent: 2rem;
+    text-align: justify;
+    line-height: 150%;
+  }
 }
 
-@media (max-width: 900px) {
-    .blog-container {
+@media (max-width: 900px), (max-width: 600px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+    .blog-item {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+    .blog-item-3 {
+      .blog-row-left {
         grid-template-columns: 1fr;
-    //     grid-template-areas: 
-    //     "header"
-    //     "sidenav"
-    //     "content"
-    //     "footer";
+        padding: 1rem 0;
+        align-content: center;
+        justify-content: center;
+        .date {
+          padding-top: 2rem;
+        }
+      }
+      .blog-row-right {
+        grid-template-columns: 1fr;
+        padding: 1rem 0;
+        align-content: center;
+        justify-content: center;
+        .desc {
+          padding-bottom: 2rem;
+        }
+      }
     }
-    
-    .grid-item {
-        grid-row: span 1;
-        grid-column: span 1;
+  }
+}
+
+#blog-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 3rem 3rem;
+  a {
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: all 0.4s;
+    color: #000;
+    font-size: 1.2em;
+    &:hover:not(.active) {
+      background-color: #ccc;
     }
-    
-    // .blog-item-1 {
-    //     grid-area: header;
-    // }
-    .grid-item-2 {
-        padding: 2rem;
-        // grid-area: sidenav;
-    }
-    // .blog-item-3 {
-    //     grid-area: content;
-    // }
-    // .blog-item-4 {
-    //     grid-area: footer;
-    // }
-    }
+  }
+  .active {
+    background-color: colors.$darkOlive;
+    color: #fff;
+  }
+}
