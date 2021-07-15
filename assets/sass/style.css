@@ -142,7 +142,7 @@ input, select, textarea {
   height: auto;
 }
 .about-container .about-item {
-  background-color: #e9f5db;
+  background-color: #F2F5DE;
 }
 .about-container .about-item-1 {
   grid-column: span 2;
@@ -225,7 +225,7 @@ input, select, textarea {
 }
 .blog-container .blog-item {
   padding: 3rem;
-  background-color: #e9f5db;
+  background-color: #F2F5DE;
 }
 .blog-container .blog-item-1 {
   grid-column: span 2;
@@ -309,7 +309,7 @@ input, select, textarea {
 }
 .contact-container .contact-item {
   padding: 3rem;
-  background-color: #e9f5db;
+  background-color: #F2F5DE;
 }
 .contact-container .contact-item-1 {
   grid-column: span 2;
@@ -611,7 +611,7 @@ body {
   grid-gap: 0.1%;
 }
 .grid-container .grid-item {
-  background-color: #e9f5db;
+  background-color: #F2F5DE;
 }
 .grid-container .grid-item-1 {
   grid-column: span 3;
